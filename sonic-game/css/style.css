@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gameboard{
+    width: 70%;
+    height: 500px;
+    border: 2px solid red;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.sonic{
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+    animation: jump 500ms;
+}
+
+.obstaculo2{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: obstaculo2-animation 3s infinite linear;
+}
+
+@keyframes obstaculo2-animation{
+    from{
+        right:-150px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    
+    0% {
+        bottom:0;
+    }
+    40%{
+        bottom: 185px;
+    }
+    50% {
+        bottom: 185px;
+    }
+    60% {
+    bottom: 185px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
